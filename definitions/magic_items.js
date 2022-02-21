@@ -155,6 +155,7 @@ export const muteCrowbar = {
   name: 'Mute Crowbar',
   attunement: false,
   description: `Functions just like a normal crowbar, but never ever causes any sound.
+  Using a crowbar grants advantage to Strength checks where the crowbar's leverage can be applied.
   `,
   image: '',
   type: 'Wondrous item',
@@ -202,7 +203,7 @@ export const ringOfBeards = {
 };
 
 export const preservativeJar = {
-  name: 'Perservative jar',
+  name: 'Perservative Jar',
   attunement: false,
   description: `Anything placed in this jar enters stasis. Cannot hold anything bigger than a toad.
   `,
