@@ -1,0 +1,732 @@
+.page {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 13mm;
+  padding-right: 13mm;
+  padding-top: 13mm;
+  padding-bottom: 13mm;
+  width: 210mm;
+  height: 297mm;
+  border: 1px solid black;
+}
+
+@media print {
+  .page {
+    border: none;
+  }
+
+}
+
+.layoutpg1 {
+  padding-left: 5mm;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "header header"
+    "abilities combat"
+    "abilities proficiencies"
+}
+
+.layoutpg2 {
+  padding-right: 5mm;
+  display: grid;
+  gap: 1mm;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas:
+    "header header"
+    "appearance personality"
+    "backstory features"
+}
+
+.layoutpg3 {
+  padding-left: 5mm;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.layoutpg4 {
+  padding-right: 5mm;
+  display: grid;
+  gap: 1mm;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(7, auto);
+  grid-auto-flow: column dense;
+}
+
+.header_alt,
+.header
+{
+  position: relative;
+  grid-area: header;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 32mm;
+}
+
+.header {
+  background-image: url('/SheetHeader.webp');
+}
+
+.header_alt {
+  background-image: url('/SheetHeaderAlt.webp');
+}
+
+.header>span,
+.header_alt>span
+{
+  position: absolute;
+}
+
+.header_name {
+  font-size: 1.3em;
+  top: 14.3mm;
+  left: 15mm;
+}
+
+.header_class {
+  font-size: 0.75em;
+  top: 11mm;
+  left: 79.5mm;
+}
+
+.header_background {
+  font-size: 0.75em;
+  top: 11mm;
+  left: 113mm;
+}
+
+.header_player {
+  font-size: 0.75em;
+  top: 11mm;
+  left: 143mm;
+}
+
+.header_race {
+  font-size: 0.75em;
+  top: 19mm;
+  left: 79.5mm;
+}
+
+.header_alignment {
+  font-size: 0.75em;
+  top: 19mm;
+  left: 113mm;
+}
+
+.header_alt_name {
+  font-size: 1.3em;
+  top: 14.1mm;
+  left: 15mm;
+}
+
+.header_alt_age {
+  font-size: 0.75em;
+  top: 11mm;
+  left: 78mm;
+}
+
+.header_alt_height {
+  font-size: 0.75em;
+  top: 11mm;
+  left: 112mm;
+}
+
+.header_alt_weight {
+  font-size: 0.75em;
+  top: 11mm;
+  left: 141mm;
+}
+
+.header_alt_eyes {
+  font-size: 0.75em;
+  top: 19mm;
+  left: 78mm;
+}
+
+.header_alt_skin {
+  font-size: 0.75em;
+  top: 19mm;
+  left: 112mm;
+}
+
+.header_alt_hair {
+  font-size: 0.75em;
+  top: 19mm;
+  left: 141mm;
+}
+
+.abilities_wrapper {
+  grid-area: abilities;
+  position: relative;
+  min-height: 235mm;
+  width: 72mm;
+}
+
+.abilities_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.abilities {
+  padding: 3mm 2mm;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto repeat(6, auto);
+  align-items: center;
+  gap: 0.5mm;
+  width: fit-content;
+}
+
+.ability_wrapper {
+  position: relative;
+  min-height: 30mm;
+  width: 21mm;
+  margin: 1mm;
+}
+
+.ability_wrapper>span {
+  position: absolute;
+  width: 25mm;
+  text-align: center;
+  top: 1mm;
+  left: 0mm;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.skill_list {
+  z-index: 1;
+  align-self: stretch;
+  border: 2px solid #000;
+  border-radius: 1mm;
+  padding: 0.5mm;
+}
+
+.ability_skill {
+  margin-bottom: 0.5mm;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.ability_skill>span {
+  z-index: 1;
+  font-size: 0.8em;
+  padding: 0.2mm;
+}
+
+.ability_prof {
+  z-index: 1;
+  display: inline-block;
+  height: 4mm;
+  width: 4mm;
+  background-color: #FFFFFF;
+  border-radius: 100%;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.senses {
+  grid-area: senses;
+}
+
+.field_wrapper {
+  position: relative;
+  min-height: 10mm;
+  width: 65mm;
+}
+
+.field_wrapper>span {
+  font-size: 0.8em;
+  position: absolute;
+  top: 2.5mm;
+  left: 15mm;
+}
+
+.field_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.combat_wrapper {
+  position: relative;
+  min-height: 137mm;
+}
+
+.combat {
+  padding: 4mm;
+  grid-area: combat;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+.combat_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.ac_wrapper {
+  position: relative;
+  min-height: 30mm;
+  width: 25mm;
+}
+
+.ac_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.ac_wrapper>span {
+  position: absolute;
+  width: 25mm;
+  text-align: center;
+  bottom: 6.5mm;
+  left: 0mm;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.box_wrapper {
+  position: relative;
+  min-height: 25mm;
+  width: 25mm;
+  /* margin: 1mm; */
+}
+
+.box_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.box_wrapper>span {
+  position: absolute;
+  width: 20mm;
+  text-align: center;
+  bottom: 2.5mm;
+  left: 2.5mm;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.altbox_wrapper {
+  position: relative;
+  min-height: 16mm;
+  width: 25mm;
+  /* margin: 1mm; */
+}
+
+.altbox_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.altbox_wrapper>span {
+  position: absolute;
+  width: 20mm;
+  text-align: center;
+  bottom: 2.5mm;
+  left: 2.5mm;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.hitpoints_wrapper {
+  position: relative;
+  width: 70mm;
+  min-height: 20mm;
+}
+
+.hitpoints_background {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.hitpoints_wrapper>span:not([class]) {
+  position: absolute;
+  width: 70mm;
+  text-align: center;
+  bottom: 2.5mm;
+  left: 0mm;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+span.death_save_success {
+  font-weight: bold;
+  font-size: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 20mm;
+  top: 1mm;
+  left: 7mm;
+}
+
+div.death_save_success {
+  position: absolute;
+  bottom: 8mm;
+  right: 5mm;
+}
+
+span.death_save_failure {
+  font-weight: bold;
+  font-size: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 20mm;
+  top: 1mm;
+  right: 7mm;
+}
+
+div.death_save_failure {
+  position: absolute;
+  bottom: 8mm;
+  left: 5mm;
+}
+
+div.death_save_success>span,
+div.death_save_failure>span
+{
+  z-index: 2;
+  display: inline-block;
+  height: 6mm;
+  width: 6mm;
+  margin: 0 1mm;
+  background-color: #FFFFFF;
+  border-radius: 100%;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.attacks {
+  grid-area: attacks;
+  position: relative;
+  flex: 1 0 100%;
+  display: grid;
+  align-content: start;
+  grid-template-columns: 40% 20% 40%;
+  grid-auto-rows: auto;
+}
+
+.attack_header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.attack_field {
+  background: #FFFFFF;
+  border-radius: 1mm;
+  height: 7mm;
+  margin: 0.5mm;
+}
+
+.proficiencies_wrapper {
+  grid-area: proficiencies;
+  position: relative;
+  min-height: 100mm;
+  width: 100%;
+}
+
+.proficiencies_background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.proficiencies {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 1.5mm 4.5mm;
+  height: 96.5mm;
+}
+
+.proficiencies p {
+  z-index: 1;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8em;
+  margin-top: 0;
+  margin-bottom: 1.5mm;
+}
+
+.appearance_wrapper {
+  grid-area: appearance;
+  position: relative;
+  /* height: 113.5mm; */
+}
+
+.appearance_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.appearance_wrapper>span:not([class]) {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 2.5mm;
+  left: 0mm;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.personality_wrapper {
+  grid-area: personality;
+  position: relative;
+  height: 113.5mm;
+}
+
+.personality_background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.personality_wrapper>span:not([class]) {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 2.5mm;
+  left: 0mm;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.personality {
+  display: grid;
+  padding: 2mm;
+  gap: 1mm;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  height: 110mm;
+}
+
+.personality_box_wrapper {
+  position: relative;
+  padding: 2mm 4mm;
+}
+
+.personality_box_background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.personality_box_wrapper>span:not([class]) {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 2.5mm;
+  left: 0mm;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.personality_wrapper>span:not([class]) {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 2.5mm;
+  left: 0mm;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.personality_trait {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8em;
+  margin: 0;
+  margin-bottom: 1mm;
+}
+
+.backstory_wrapper {
+  grid-area: backstory;
+  position: relative;
+  /* height: 113.5mm; */
+}
+
+.backstory_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.backstory_wrapper>span:not([class]) {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 2.5mm;
+  left: 0mm;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.features_wrapper {
+  grid-area: features;
+  position: relative;
+  /* height: 113.5mm; */
+}
+
+.features_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.features_wrapper>span:not([class]) {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 2.5mm;
+  left: 0mm;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.appearance_wrapper>p:not([class]),
+.backstory_wrapper>p:not([class]),
+.features_wrapper>p:not([class])
+{
+  font-family: 'Roboto', sans-serif;
+  z-index: 2;
+  padding: 0 4mm;
+  font-size: 0.8em;
+}
+
+.feature_wrapper {
+  position: relative;
+  height: 266mm;
+  padding: 2mm 3mm;
+}
+
+.small_feature_wrapper {
+  position: relative;
+  min-height: 32.5mm;
+  padding: 2mm 3mm;
+}
+
+.background_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.feature_wrapper p,
+.small_feature_wrapper p {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8em;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 25mm;
+}
+
+.background > svg {
+  height: 30mm;
+  width: 100%;
+}
+
+.slot_wrapper {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.slot {
+  display: inline-block;
+  width: 7mm;
+  height: 7mm;
+  margin: 0.5mm 1mm;
+  border-radius: 1mm;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table td, .table th {
+  border-bottom: 1px solid black;
+}
+
+.table td {
+  padding: 0 1mm;
+  text-align: center;
+}
+
+@page {
+  size: A4;
+}
