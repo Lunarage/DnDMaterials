@@ -106,6 +106,7 @@
 }
 
 .card_description {
+  font-family: 'Roboto', sans-serif;
   font-size: 10pt;
   flex: 1 1 100%;
   padding: 1mm;

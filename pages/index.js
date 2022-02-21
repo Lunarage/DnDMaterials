@@ -21,6 +21,16 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Page>
+        <Weapon weapon={weapon.rapier} />
+        <Armor armor={armor.leather} />
+        <Weapon weapon={weapon.longbow} />
+        <Item item={gear.rope_hempen} />
+        <Item item={gear.crowbar} />
+        <Item item={gear.hammer} />
+        <Item item={gear.tinderbox} />
+        <Item item={gear.waterskin} />
+      </Page>
+      <Page>
         <Item item={magicitem.cloak_of_elvenkind_front} />
         <Item item={magicitem.lantern_of_revealing_front} />
         <Item item={magicitem.immovable_rod_front} />
@@ -71,6 +81,10 @@ export default function Home() {
         <Item item={magicitem.gauntlets_of_ogre_power} />
       </Page>
       <Page>
+        <Item item={gear.healers_kit} />
+        <Item item={gear.healers_kit} />
+        <Item item={gear.healers_kit} />
+        <Item item={gear.healers_kit} />
         <Item item={gear.healers_kit} />
         <Item item={gear.healers_kit} />
         <Item item={gear.healers_kit} />
