@@ -1,21 +1,18 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import React from 'react';
+import styles from '../styles/Home.module.css';
 import {
   Page,
-  EmptyPage,
   Weapon,
-  Potion,
   Armor,
   Item,
   Basic,
   Empty,
-} from "../components/cards";
-import * as weapon from "../definitions/weapons";
-import * as potion from "../definitions/potions";
-import * as armor from "../definitions/armor";
-import * as magicitem from "../definitions/magic_items";
-import * as gear from "../definitions/gear";
+} from '../components/cards';
+import * as weapon from '../definitions/weapons';
+import * as potion from '../definitions/potions';
+import * as armor from '../definitions/armor';
+import * as magicitem from '../definitions/magic_items';
+import * as gear from '../definitions/gear';
 
 export default function Home() {
   return (
@@ -24,94 +21,94 @@ export default function Home() {
         <Weapon weapon={weapon.rapier} />
         <Armor armor={armor.leather} />
         <Weapon weapon={weapon.longbow} />
-        <Item item={gear.rope_hempen} />
+        <Item item={gear.ropeHempen} />
         <Item item={gear.crowbar} />
         <Item item={gear.hammer} />
         <Item item={gear.tinderbox} />
         <Item item={gear.waterskin} />
       </Page>
       <Page>
-        <Item item={magicitem.cloak_of_elvenkind_front} />
-        <Item item={magicitem.lantern_of_revealing_front} />
-        <Item item={magicitem.immovable_rod_front} />
-        <Item item={magicitem.necklace_of_fireballs_front} />
-        <Weapon weapon={weapon.dragon_slayer_front} />
-        <Weapon weapon={weapon.hew_front} />
+        <Item item={magicitem.cloakOfElvenkindFront} />
+        <Item item={magicitem.lanternOfRevealingFront} />
+        <Item item={magicitem.immovableRodFront} />
+        <Item item={magicitem.necklaceOfFireballsFront} />
+        <Weapon weapon={weapon.dragonSlayerFront} />
+        <Weapon weapon={weapon.hewFront} />
         <Empty />
         <Empty />
       </Page>
       <Page>
-        <Basic item={magicitem.necklace_of_fireballs_back} />
-        <Basic item={magicitem.immovable_rod_back} />
-        <Basic item={magicitem.lantern_of_revealing_back} />
-        <Basic item={magicitem.cloak_of_elvenkind_back} />
+        <Basic item={magicitem.necklaceOfFireballsBack} />
+        <Basic item={magicitem.immovableRodBack} />
+        <Basic item={magicitem.lanternOfRevealingBack} />
+        <Basic item={magicitem.cloakOfElvenkindBack} />
         <Empty />
         <Empty />
-        <Basic item={weapon.hew_back} />
-        <Basic item={weapon.dragon_slayer_back} />
+        <Basic item={weapon.hewBack} />
+        <Basic item={weapon.dragonSlayerBack} />
       </Page>
       <Page>
-        <Item item={magicitem.pole_of_collapsing} />
-        <Item item={magicitem.lute_of_illusions} />
-        <Item item={magicitem.clockwork_amulet} />
-        <Item item={magicitem.cloak_of_many_fashions} />
-        <Item item={magicitem.cloak_of_billowing} />
-        <Item item={magicitem.dust_of_disappearance} />
-        <Item item={magicitem.goggles_of_night} />
-        <Item item={magicitem.mystery_key} />
+        <Item item={magicitem.poleOfCollapsing} />
+        <Item item={magicitem.luteOfIllusions} />
+        <Item item={magicitem.clockworkAmulet} />
+        <Item item={magicitem.cloakOfManyFashions} />
+        <Item item={magicitem.cloakOfBillowing} />
+        <Item item={magicitem.dustOfDisappearance} />
+        <Item item={magicitem.gogglesOfNight} />
+        <Item item={magicitem.mysteryKey} />
       </Page>
       <Page>
-        <Item item={magicitem.mute_crowbar} />
-        <Item item={magicitem.releasing_hook} />
-        <Item item={magicitem.unending_coil} />
+        <Item item={magicitem.muteCrowbar} />
+        <Item item={magicitem.releasingHook} />
+        <Item item={magicitem.unendingCoil} />
         <Item item={magicitem.flutterscope} />
-        <Item item={magicitem.ring_of_beards} />
-        <Item item={magicitem.preservative_jar} />
-        <Item item={magicitem.mug_of_infinite_coffee} />
-        <Item item={magicitem.ring_of_feign_death} />
+        <Item item={magicitem.ringOfBeards} />
+        <Item item={magicitem.preservativeJar} />
+        <Item item={magicitem.mugOfInfiniteCoffee} />
+        <Item item={magicitem.ringOfFeignDeath} />
       </Page>
       <Page>
-        <Item item={magicitem.ring_of_warmth} />
-        <Item item={magicitem.ring_of_warmth} />
-        <Item item={magicitem.ring_of_warmth} />
-        <Item item={magicitem.ring_of_warmth} />
-        <Item item={magicitem.ring_of_warmth} />
-        <Item item={magicitem.boots_of_elvenkind} />
-        <Item item={magicitem.bracers_of_archery} />
-        <Item item={magicitem.gauntlets_of_ogre_power} />
+        <Item item={magicitem.ringOfWarmth} />
+        <Item item={magicitem.ringOfWarmth} />
+        <Item item={magicitem.ringOfWarmth} />
+        <Item item={magicitem.ringOfWarmth} />
+        <Item item={magicitem.ringOfWarmth} />
+        <Item item={magicitem.bootsOfElvenkind} />
+        <Item item={magicitem.bracersOfArchery} />
+        <Item item={magicitem.gauntletsOfOgrePower} />
       </Page>
       <Page>
-        <Item item={gear.healers_kit} />
-        <Item item={gear.healers_kit} />
-        <Item item={gear.healers_kit} />
-        <Item item={gear.healers_kit} />
-        <Item item={gear.healers_kit} />
-        <Item item={gear.healers_kit} />
-        <Item item={gear.healers_kit} />
-        <Item item={gear.healers_kit} />
-      </Page>
-      <Page>
-        <Item item={potion.healing} />
-        <Item item={potion.healing} />
-        <Item item={potion.healing} />
-        <Item item={potion.healing} />
-        <Item item={potion.healing} />
-        <Item item={potion.healing} />
-        <Item item={potion.healing} />
-        <Item item={potion.healing} />
+        <Item item={gear.healersKit} />
+        <Item item={gear.healersKit} />
+        <Item item={gear.healersKit} />
+        <Item item={gear.healersKit} />
+        <Item item={gear.healersKit} />
+        <Item item={gear.healersKit} />
+        <Item item={gear.healersKit} />
+        <Item item={gear.healersKit} />
       </Page>
       <Page>
         <Item item={potion.healing} />
         <Item item={potion.healing} />
-        <Item item={potion.healing_greater} />
-        <Item item={potion.healing_greater} />
-        <Item item={potion.healing_superior} />
-        <Item item={potion.healing_superior} />
-        <Item item={potion.healing_supreme} />
-        <Item item={potion.healing_supreme} />
+        <Item item={potion.healing} />
+        <Item item={potion.healing} />
+        <Item item={potion.healing} />
+        <Item item={potion.healing} />
+        <Item item={potion.healing} />
+        <Item item={potion.healing} />
       </Page>
       <Page>
-        <Item item={potion.water_breathing} />
+        <Item item={potion.healing} />
+        <Item item={potion.healing} />
+        <Item item={potion.healingGreater} />
+        <Item item={potion.healingGreater} />
+        <Item item={potion.healingSuperior} />
+        <Item item={potion.healingSuperior} />
+        <Item item={potion.healingSupreme} />
+        <Item item={potion.healingSupreme} />
+      </Page>
+      <Page>
+        <Item item={potion.waterBreathing} />
         <Item item={potion.invurnerability} />
       </Page>
       <Page>
@@ -125,44 +122,44 @@ export default function Home() {
         <Armor armor={armor.leather} />
       </Page>
       <Page>
-        <Armor armor={armor.studded_leather} />
-        <Armor armor={armor.studded_leather} />
-        <Armor armor={armor.studded_leather} />
-        <Armor armor={armor.studded_leather} />
+        <Armor armor={armor.studdedLeather} />
+        <Armor armor={armor.studdedLeather} />
+        <Armor armor={armor.studdedLeather} />
+        <Armor armor={armor.studdedLeather} />
         <Armor armor={armor.hide} />
         <Armor armor={armor.hide} />
         <Armor armor={armor.hide} />
         <Armor armor={armor.hide} />
       </Page>
       <Page>
-        <Armor armor={armor.chain_shirt} />
-        <Armor armor={armor.chain_shirt} />
-        <Armor armor={armor.chain_shirt} />
-        <Armor armor={armor.chain_shirt} />
-        <Armor armor={armor.scale_mail} />
-        <Armor armor={armor.scale_mail} />
-        <Armor armor={armor.scale_mail} />
-        <Armor armor={armor.scale_mail} />
+        <Armor armor={armor.chainShirt} />
+        <Armor armor={armor.chainShirt} />
+        <Armor armor={armor.chainShirt} />
+        <Armor armor={armor.chainShirt} />
+        <Armor armor={armor.scaleMail} />
+        <Armor armor={armor.scaleMail} />
+        <Armor armor={armor.scaleMail} />
+        <Armor armor={armor.scaleMail} />
       </Page>
       <Page>
         <Armor armor={armor.breastplate} />
         <Armor armor={armor.breastplate} />
         <Armor armor={armor.breastplate} />
         <Armor armor={armor.breastplate} />
-        <Armor armor={armor.half_plate} />
-        <Armor armor={armor.half_plate} />
-        <Armor armor={armor.half_plate} />
-        <Armor armor={armor.half_plate} />
+        <Armor armor={armor.halfPlate} />
+        <Armor armor={armor.halfPlate} />
+        <Armor armor={armor.halfPlate} />
+        <Armor armor={armor.halfPlate} />
       </Page>
       <Page>
-        <Armor armor={armor.ring_mail} />
-        <Armor armor={armor.ring_mail} />
-        <Armor armor={armor.ring_mail} />
-        <Armor armor={armor.ring_mail} />
-        <Armor armor={armor.chain_mail} />
-        <Armor armor={armor.chain_mail} />
-        <Armor armor={armor.chain_mail} />
-        <Armor armor={armor.chain_mail} />
+        <Armor armor={armor.ringMail} />
+        <Armor armor={armor.ringMail} />
+        <Armor armor={armor.ringMail} />
+        <Armor armor={armor.ringMail} />
+        <Armor armor={armor.chainMail} />
+        <Armor armor={armor.chainMail} />
+        <Armor armor={armor.chainMail} />
+        <Armor armor={armor.chainMail} />
       </Page>
       <Page>
         <Armor armor={armor.splint} />
@@ -185,10 +182,10 @@ export default function Home() {
         <Armor armor={armor.shield} />
       </Page>
       <Page>
-        <Armor armor={armor.chain_mail_mithril} />
-        <Weapon weapon={weapon.longbow_1} />
-        <Weapon weapon={weapon.mace_1} />
-        <Weapon weapon={weapon.shortsword_1} />
+        <Armor armor={armor.chainMailMithril} />
+        <Weapon weapon={weapon.longbow1} />
+        <Weapon weapon={weapon.mace1} />
+        <Weapon weapon={weapon.shortsword1} />
       </Page>
       <Page>
         <Weapon weapon={weapon.battleaxe} />
@@ -201,14 +198,14 @@ export default function Home() {
         <Weapon weapon={weapon.club} />
       </Page>
       <Page>
-        <Weapon weapon={weapon.crossbow_heavy} />
-        <Weapon weapon={weapon.crossbow_heavy} />
-        <Weapon weapon={weapon.crossbow_heavy} />
-        <Weapon weapon={weapon.crossbow_heavy} />
-        <Weapon weapon={weapon.crossbow_light} />
-        <Weapon weapon={weapon.crossbow_light} />
-        <Weapon weapon={weapon.crossbow_light} />
-        <Weapon weapon={weapon.crossbow_light} />
+        <Weapon weapon={weapon.crossbowHeavy} />
+        <Weapon weapon={weapon.crossbowHeavy} />
+        <Weapon weapon={weapon.crossbowHeavy} />
+        <Weapon weapon={weapon.crossbowHeavy} />
+        <Weapon weapon={weapon.crossbowLight} />
+        <Weapon weapon={weapon.crossbowLight} />
+        <Weapon weapon={weapon.crossbowLight} />
+        <Weapon weapon={weapon.crossbowLight} />
       </Page>
       <Page>
         <Weapon weapon={weapon.dagger} />

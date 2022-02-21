@@ -1,3 +1,9 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "airbnb", "airbnb/hooks"],
+  "rules": {
+    "semi": [1, "always"],
+    "no-trailing-spaces": "warn",
+    "comma-dangle": [1, "always-multiline"],
+    "quotes": [1, "single"]
+  }
 }
