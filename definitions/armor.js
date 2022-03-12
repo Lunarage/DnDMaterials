@@ -151,3 +151,30 @@ export const shield = {
   properties: [],
   rarity: 'common',
 };
+
+export const sentinelShield = {
+  name: 'Sentinel Shield',
+  armorclass: '+2',
+  type: 'Shield',
+  image: '/Armor/shield.png',
+  properties: [],
+  rarity: 'uncommon',
+};
+
+export const dragonguardFront = {
+  name: 'Dragonguard',
+  armorclass: '15 + Dex modifier(max 2)',
+  type: 'Medium Armor (Breastplate)',
+  image: '/Armor/chest-armor.png',
+  properties: [],
+  rarity: 'rare',
+};
+
+export const dragonguardBack = {
+  name: 'Dragonguard',
+  content: `This +1 breastplate has a gold dragon motif worked into its design. It grants its wearer advantage on saving throws against the breath weapons of creatures that have the dragon type.
+
+This armor consists of a fitted metal chest piece worn with supple leather. Although it leaves the legs and arms relatively unprotected, this armor provides good protection for the wearer's vital organs while leaving the wearer relatively unencumbered.
+`,
+  rarity: 'rare',
+};

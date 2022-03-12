@@ -5,8 +5,8 @@ import {
   Weapon,
   Armor,
   Item,
-  Basic,
   Empty,
+  Basic,
 } from '../components/cards';
 import * as weapon from '../definitions/weapons';
 import * as potion from '../definitions/potions';
@@ -18,48 +18,20 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Page>
-        <Weapon weapon={weapon.rapier} />
-        <Armor armor={armor.leather} />
-        <Weapon weapon={weapon.longbow} />
-        <Item item={gear.ropeHempen} />
-        <Item item={gear.crowbar} />
-        <Item item={gear.hammer} />
-        <Item item={gear.tinderbox} />
-        <Item item={gear.waterskin} />
+        <Weapon weapon={weapon.javelinOfLightningFront} />
+        <Item item={magicitem.ringOfTheRamFront} />
+        <Armor armor={armor.dragonguardFront} />
+        <Weapon weapon={weapon.forceCrossbowFront} />
+        <Weapon weapon={weapon.shortbow1} />
+        <Weapon weapon={weapon.greataxe1} />
+        <Weapon weapon={weapon.greatsword1} />
+        <Weapon weapon={weapon.trident1} />
       </Page>
       <Page>
-        <Armor armor={armor.chainMailMithril} />
-        <Weapon weapon={weapon.battleaxe1} />
-        <Weapon weapon={weapon.longbow1} />
-        <Weapon weapon={weapon.mace1} />
-        <Weapon weapon={weapon.shortsword1} />
-        <Weapon weapon={weapon.longsword1} />
-        <Weapon weapon={weapon.rapier1} />
-        <Weapon weapon={weapon.quarterstaff1} />
-      </Page>
-      <Page>
-        <Item item={magicitem.muteCrowbar} />
-        <Item item={magicitem.releasingHook} />
-        <Item item={magicitem.unendingCoil} />
-        <Item item={magicitem.flutterscope} />
-        <Item item={magicitem.ringOfBeards} />
-        <Item item={magicitem.preservativeJar} />
-        <Item item={magicitem.mugOfInfiniteCoffee} />
-        <Item item={magicitem.ringOfFeignDeath} />
-      </Page>
-      <Page>
-        <Item item={gear.healersKit} />
-        <Item item={gear.healersKit} />
-        <Item item={gear.healersKit} />
-        <Item item={gear.healersKit} />
-        <Item item={gear.healersKit} />
-        <Item item={gear.healersKit} />
-        <Item item={gear.healersKit} />
-        <Item item={gear.healersKit} />
-      </Page>
-      <Page>
-        <Item item={potion.waterBreathing} />
-        <Item item={potion.invurnerability} />
+        <Basic item={weapon.forceCrossbowBack} />
+        <Basic item={armor.dragonguardBack} />
+        <Basic item={magicitem.ringOfTheRamBack} />
+        <Basic item={weapon.javelinOfLightningBack} />
       </Page>
     </main>
   );

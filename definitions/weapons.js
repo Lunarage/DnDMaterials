@@ -843,3 +843,43 @@ export const hewBack = {
   `,
   rarity: 'uncommon',
 };
+
+export const javelinOfLightningFront = {
+  name: 'Javelin of Lightning',
+  damage: '1d6',
+  damage_type: 'Piercing (Magic)',
+  image: '/Items/javelin-of-lightning.webp',
+  dice: '/Icons/d6.png',
+  damage_type_image: '/Icons/piercing.svg',
+  weapon_type: 'Simple Melee Weapon (Javelin), uncommon',
+  weapon_properties: ['Thrown (Range 30/120)'],
+  rarity: 'uncommon',
+};
+
+export const javelinOfLightningBack = {
+  name: 'Javelin of Lightning',
+  content: `When you hurl it and speak its command word, it transforms into a bolt of lightning, forming a line 5 feet wide that extends out from you to a target within 120 feet. Each creature in the line excluding you and the target must make a DC 13 Dexterity saving throw, taking 4d6 lightning damage on a failed save, and half as much damage on a successful one. Make a ranged weapon attack against the target. On a hit, the target takes damage from the javelin plus 4d6 lightning damage.
+The javelin's property can't be used again until the next dawn.
+  `,
+  rarity: 'uncommon',
+};
+
+export const forceCrossbowFront = {
+  name: 'Force Crossbow',
+  damage: '1d6',
+  damage_type: 'Force (Magic)',
+  image: '/Weapons/Hand_Crossbow_A_01_1x1.png',
+  dice: '/Icons/d6.png',
+  damage_type_image: '/Icons/bludgeoning.svg',
+  weapon_type: 'Martial Ranged Weapon',
+  weapon_properties: ['Ammunition (range 30/120),', 'Light,', 'Loading'],
+  rarity: 'uncommon',
+  slots: 8,
+};
+
+export const forceCrossbowBack = {
+  name: 'Force Crossbow',
+  content: `A hand crossbow that fires bolts that deal force damage instead of physical bolts. Can hold a maximum of 8 charges and gains 1d4 charges every dawn. Firing the bow takes a charge, and you can use an additional charge to give yourself advantage on the attack. These force bolts leave no marking of physical damage.
+  `,
+  rarity: 'uncommon',
+};

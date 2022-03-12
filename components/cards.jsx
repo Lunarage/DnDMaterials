@@ -48,6 +48,9 @@ export function Trait({ rarity }) {
 }
 
 export function Weapon({ weapon }) {
+  function slots(numb) {
+    return new Array(numb).fill(<div className={styles.card_slot} />);
+  }
   return (
     <Card rarity={weapon.rarity}>
       <div className={styles.card_row_header}>
@@ -96,6 +99,9 @@ export function Weapon({ weapon }) {
             </span>
           ))}
         </div>
+      )}
+      {weapon.slots > 0 && (
+        <div className={styles.card_row_slots}>{slots(weapon.slots)}</div>
       )}
     </Card>
   );
