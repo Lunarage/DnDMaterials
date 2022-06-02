@@ -33,6 +33,9 @@ export default function Home() {
         <Basic item={magicitem.ringOfTheRamBack} />
         <Basic item={weapon.javelinOfLightningBack} />
       </Page>
+      <Page>
+        <Item item={magicitem.molton} />
+      </Page>
     </main>
   );
 }

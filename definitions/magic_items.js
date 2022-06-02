@@ -236,6 +236,15 @@ export const ringOfFeignDeath = {
   rarity: 'common',
 };
 
+export const molton = {
+  name: 'Molton',
+  attunement: true,
+  description: 'While you wear this cloak, you have control over your gift from sotor: Casting leveled spells no longer trigger wild magic surges, and you are proficient in Arcana.',
+  image: '',
+  type: 'Wondrous item',
+  rarity: 'rare',
+};
+
 export const mysteryKey = {
   name: 'Mystery Key',
   attunement: false,
